@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Home */
+    /* Horários */
+.horarios-bg {
+  width: 100%;
+  height: auto;
+  background-color: #1188ee;
+}
+
+.horarios {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.horarios span {
+  display: block;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 400px) {
+  .horarios-bg {
+    padding: 10px;
+  }
+
+  .horarios span {
+    text-align: center;
+  }
+}
