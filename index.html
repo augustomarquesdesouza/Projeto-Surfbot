@@ -1,38 +1,180 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SurfBot - Aulas de Surf!</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="horarios-bg">
-      <div class="horarios container">
-        <span>Aulas na Praia Mansa de Sexta à Domingo das 06:00 às 14:00</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SurfBot - Aulas de Surf!</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alice&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <div class="horarios-bg">
+    <div class="horarios container">
+      <span>Aulas na Praia Mansa de Sexta à Domingo das 06:00 às 14:00</span>
+    </div>
+  </div>
+  <div class="nav-bg">
+    <nav id="menuPrincipal" class="container">
+      <div class="nav-logo">
+        <a href="./">
+          <img src="./assets/img/surfbot-logo.svg" alt="Surfbot" id="navLogo">
+        </a>
       </div>
-    </div>
-    <div class="nav-bg">
-      <nav id="menuPrincipal">
-        <ul>
-          <li>Praia</li>
-          <li>Aulas</li>
-          <li>Contato</li>
-          <li>Matricule-se</li>
+      <ul class="menu-desktop">
+        <li>
+          <a href="#praias">Praia</a>
+        </li>
+        <li>
+          <a href="#aulas">Aulas</a>
+        </li>
+        <li>
+          <a href="">Contato</a>
+        </li>
+        <li>
+          <a href="">Matricule-se</a>
+        </li>
+      </ul>
+      <i class="bi bi-list" onclick="changeIcon(this)"></i>
+      <div class="menu-mobile">
+        <ul class="menu-mobile-items">
+          <li>
+            <a href="">Praia</a>
+          </li>
+          <li>
+            <a href="">Aulas</a>
+          </li>
+          <li>
+            <a href="">Contato</a>
+          </li>
+          <li>
+            <a href="">Matricule-se</a>
+          </li>
         </ul>
-      </nav>
+      </div>
+    </nav>
+  </div>
+  <div class="header-bg sobrepor-menu">
+    <header id="header" class="container sobrepor-menu">
+      <div class="content-header">
+        <h1>Escola de Surf</h1>
+      </div>
+      <div class="forms-header">
+        <input type="text" placeholder="E-mail">
+        <button type="submit">Matricule-se</button>
+      </div>
+    </header>
+  </div>
+  <main>
+    <section id="praias" class="container">
+      <div class="col-1">
+        <h2><span class="azul">Aulas</span> em uma das melhores praias do <span class="azul">Rio</span>.</h2>
+        <div class="grid-qualidades">
+          <div id="sandalhas">
+            <img src="assets/img/sandalhas.svg" alt="" id="sandalhas">
+            <span>8km de costa</span>
+          </div>
+          <div id="coco">
+            <img src="assets/img/coco.svg" alt="" id="coco">
+            <span>Restaurantes à beira mar</span>
+          </div>
+          <div id="boia">
+            <img src="assets/img/boia.svg" alt="" id="boia">
+            <span>Salva-vidas a cada 300m</span>
+          </div>
+        </div>
+        <p class="praias-content">
+          Como cidade capital, abriga na zona chamada Plateau, promontório à beira-mar, edifícios públicos e outras
+          construções de importância, como o Palácio Presidencial, construído no fim do século XIX para ser a residência
+          do governador português.<br><br>
+          Como cidade capital, abriga na zona chamada Plateau, promontório à beira-mar, edifícios públicos e outras
+          construções de importância, como o Palácio Presidencial, construído no fim do século XIX para ser a residência
+          do governador português.
+        </p>
+      </div>
+      <div class="col-2">
+        <div class="img-local">
+          <img src="assets/img/local.png" alt="" id="principal">
+          <img src="assets/img/mapa.jpg" alt="" id="mapa">
+          <div class="como-chegar">
+            <h3>
+              COMO CHEGAR
+            </h3>
+            <p><span class="azul-marinho">Carro</span> pela via Lúcio Costa sentido Barra </p>
+            <p><span class="azul-marinho">Ônibus</span> linhas 2333, 138, 189 e 17 </p>
+            <p><span class="azul-marinho">Metrô</span> linha azul sentido Zona Sul </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="bg-aulas">
+      <h2 class="aulas-titutlo">Aulas</h2>
+      <section id="aulas" class="container">
+        <div class="card">
+          <h3>INFANTIL</h3>
+          <div class="card-content container">
+            <ul>
+              <li>Público entre 5 e 15 anos</li>
+              <li>Equipamentos fornecidos</li>
+              <li>Horário de Sex. à Sab.</li>
+              <li>2 horas seguidas de aula</li>
+            </ul>
+            <span class="preco">R$ 49,00 / Aula</span>
+            <a href="">Matricule-se</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>ADULTO</h3>
+          <div class="card-content container">
+            <ul>
+              <li>Público entre 5 e 15 anos</li>
+              <li>Equipamentos fornecidos</li>
+              <li>Horário de Sex. à Sab.</li>
+              <li>2 horas seguidas de aula</li>
+            </ul>
+            <span class="preco">R$ 49,00 / Aula</span>
+            <a href="">Matricule-se</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>PROFISSIONAL</h3>
+          <div class="card-content container">
+            <ul>
+              <li>Público entre 5 e 15 anos</li>
+              <li>Equipamentos fornecidos</li>
+              <li>Horário de Sex. à Sab.</li>
+              <li>2 horas seguidas de aula</li>
+            </ul>
+            <span class="preco">R$ 49,00 / Aula</span>
+            <a href="">Matricule-se</a>
+          </div>
+        </div>
+        <div class="aulas-footer">
+          <p>
+            Possui um grupo com mais de <span class="vermelho">3 pessoas?</span><br>
+            Entre em <a href="#contato" class="vermelho">contato</a> para um desconto personalizado.
+          </p>
+        </div>
+      </section>
+      <aside>
+        <h3>“O surf liberta as
+          ondas de uma vida.”</h3>
+        <p>Regis Pereira</p>
+      </aside>
     </div>
-  </body>
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>

@@ -4,13 +4,28 @@
   box-sizing: border-box;
 }
 
+body {
+  margin-bottom: 2000px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+.sobrepor-menu {
+  z-index: -9999;
+}
+
 html {
   font-size: 62.5%;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 0 auto !important;
+  max-width: 1400px !important;
+  padding: 11px 45px !important;
 }
 
 /* Home */
@@ -38,8 +53,763 @@ html {
   .horarios-bg {
     padding: 10px;
   }
+}
+/* Navbar */
+.nav-bg {
+  background-color: #17222D;
+  position: relative;
+}
 
-  .horarios span {
+#menuPrincipal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -100;
+}
+
+#menuPrincipal ul {
+  display: flex;
+  gap: 38px;
+  list-style: none;
+}
+
+#menuPrincipal li a {
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.8rem;
+  transition: .3s;
+}
+
+#menuPrincipal li {
+  position: relative;
+}
+
+#menuPrincipal li a:hover{
+  color: #dadada;
+}
+
+#menuPrincipal ul li:first-child::before {
+  content: "⃝";
+  display: inline-block;
+  color: #fff;
+  font-weight: bolder;
+  position: absolute;
+  left: 55px;
+  top: 3px;
+}
+
+#menuPrincipal ul li:nth-child(2)::before {
+  content: "⃝";
+  display: inline-block;
+  color: #fff;
+  font-weight: bolder;
+  position: absolute;
+  left: 60px;
+  top: 3px;
+}
+
+#menuPrincipal ul li:nth-child(3)::before {
+  content: "⃝";
+  display: inline-block;
+  color: #fff;
+  font-weight: bolder;
+  position: absolute;
+  left: 80px;
+  top: 3px;
+}
+
+#menuPrincipal ul li:last-child::before {
+  content: "";
+  display: block;
+  background-color: #EE2211;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  top: 25px;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+#menuPrincipal i {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #menuPrincipal ul li:last-child::before {
+    display: none;
+  }
+
+  #menuPrincipal ul li:first-child::before {
+    display: none;
+  }
+  
+  #menuPrincipal ul li:nth-child(2)::before {
+    display: none;
+  }
+  
+  #menuPrincipal ul li:nth-child(3)::before {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  #menuPrincipal .menu-desktop  {
+    display: none;
+  }
+
+
+  .menu-mobile {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #17222D;
+    visibility: hidden;
+    transition: transform 0.2s;
+    transform: translateY(-100%);
+    z-index: 100;
+  }
+  
+  .menu-mobile.ativo {
+    visibility: visible;
+    transform: translateY(0); 
+  }
+
+  .menu-mobile-items {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
     text-align: center;
+    padding: 10px 45px 20px 45px;
+    gap: 20px !important;
+  }
+
+  .menu-mobile .menu-mobile-items li a {
+    color: #fff;
+    font-size: 2rem !important;
+    position: relative;
+  }
+
+  .menu-mobile .menu-mobile-items li a:hover::before {
+    color: #1188ee;
+  }
+
+  #menuPrincipal i {
+    display: block !important;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: 10px;
+  }
+} /* Fim Navbar */
+
+/* Header */
+.header-bg {
+  background: url(../img/bg-intro.jpg) center center no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 400px;
+  margin: 0 !important;
+  padding: 0;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: end;
+  justify-content: center;
+  height: 90%;
+}
+
+#header h1 {
+  font-size: 7.2rem;
+  color: #fff;
+}
+
+#header .content-header {
+  grid-column: 1 / 4;
+}
+
+#header .forms-header {
+  display: flex;
+  align-items: center;
+  grid-column: 5;
+}
+
+#header .forms-header input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 19px;
+  border: 0;
+  outline: none;
+  width: 470px;
+  font-size: 1.8rem;
+  color: #BBCCDD;
+  font-weight: 700;
+}
+
+input::-webkit-input-placeholder { /* Para navegadores WebKit */
+  color: #BBCCDD;
+}
+
+#header .forms-header button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 18px;
+  border: 0;
+  background-color: #EE2211;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  #header {
+    grid-template-columns: 1fr;
+    align-content: center;
+    text-align: center;
+  }
+
+  #header .content-header {
+    grid-column: 1 / 5;
+  }
+  
+  #header .forms-header {
+    margin-top: 40px;
+    display: flex;
+    justify-self: center;
+    grid-column: 1 / 5;
+  }
+}
+
+@media (max-width: 750px) {
+  #header .forms-header {
+    flex-direction: column;
+  }
+
+  #header .forms-header input {
+    border-radius: 5px;
+  }
+
+  #header .forms-header button {
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  #header h1 {
+    font-size: 6rem;
+  }
+
+  #header .forms-header input {
+    width: 80%;
+  }
+
+  #header .forms-header button {
+    width: 100%px;
+  }
+}
+/* Fim Header */
+
+/* Praias */
+#praias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 60px !important;
+  gap: 250px;
+}
+
+.azul {
+  color: #1188ee;
+}
+
+.azul-marinho {
+  color: #17222D;
+}
+
+#praias h2 {
+  font-family: 'Alice', serif;
+  font-size: 7.2rem;
+  font-weight: 400;
+  max-width: 12ch;
+  margin-bottom: 102px;
+}
+
+.col-1 {
+  order: 2;
+}
+
+.col-2 {
+  order: 1;
+}
+
+.grid-qualidades {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 92px;
+}
+
+#sandalhas, #boia, #coco {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  position: relative;
+  vertical-align: bottom;
+}
+
+#sandalhas, #boia, #coco > span {
+  font-size: 24px;
+  color: #445566;
+  font-family: 'Nunito', sans-serif;
+}
+
+#sandalhas::after {
+  content: "";
+  display: block;
+  background-color: #EFF4F9;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  bottom: 84px;
+}
+
+#coco::after {
+  content: "";
+  display: block;
+  background-color: #EFF4F9;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 104px;
+}
+
+#boia::after {
+  content: "";
+  display: block;
+  background-color: #EFF4F9;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 104px;
+}
+
+#praias .praias-content {
+  margin-top: 85px;
+  font-size: 1.8rem;
+  font-family: 'Nunito', sans-serif;
+  color: #445566;
+}
+
+#praias #mapa {
+  margin-top: 20px;
+}
+
+#praias .como-chegar {
+  padding-top: 40px;
+}
+
+#praias .como-chegar h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  color: #17222D;
+  margin-bottom: 13px;
+}
+
+#praias .como-chegar h3::before {
+  content: "⃝";
+  display: inline-block;
+  color: #FF3726;
+  font-weight: bolder;
+}
+
+#praias .como-chegar p {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom:  10px;
+  font-family: 'Nunito', sans-serif;
+  color: #92a1af;
+}
+
+#praias .como-chegar p span {
+  position: relative;
+}
+
+#praias .como-chegar p span::after {
+  content: "";
+  display: inline-block;
+  background: #1188ee;
+  width: 10px;
+  height: 2px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1200px) {
+  #praias {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  #praias #principal {
+    display: none;
+  }
+
+  .col-1 {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #praias h2 {
+    max-width: 100%;
+    text-align: center;
+    font-size: 5rem;
+  }
+
+  #praias .praias-content {
+    margin-top: 50px;
+  }
+  
+  .col-2 {
+    order: 2;
+  }
+
+  .img-local {
+    display: flex;
+    gap: 20px;
+  }
+
+  .grid-qualidades {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #sandalhas::after {
+    content: "";
+    display: none;
+  }
+  
+  #coco::after {
+    content: "";
+    display: none;
+  }
+  
+  #boia::after {
+    content: "";
+    display: none;
+  }
+
+  #sandalhas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+  }
+
+  #coco {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+  }
+
+  #boia {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+  }
+}
+
+@media (max-width: 750px) {
+  .img-local {
+    display: block;
+    gap: 20px;
+  }
+}
+
+@media(max-width: 400px) {
+
+  #praias h2 {
+    margin-bottom: 50px;
+    font-size: 4rem;
+  }
+
+  .grid-qualidades {
+    gap: 50px;
+  }
+
+  #sandalhas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+  }
+
+  #coco {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+  }
+
+  #boia {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+  }
+
+  #sandalhas, #coco,  #boia > span {
+    font-size: 2.2rem !important;
+  } 
+}
+/* Fim Praias */
+
+.bg-aulas {
+  background-color: #EFF4F9;
+  margin-top: 95px;
+}
+
+.bg-aulas h2 {
+  text-align: center;
+  padding-top: 63px;
+  font-size: 7.2rem;
+  font-weight: 400;
+  font-family: 'Alice', serif;
+  color: #445566;
+  position: relative;
+}
+
+.bg-aulas h2::before {
+  content: "";
+  background: url(../img/ondas.png) center center no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 74px;
+}
+
+
+#aulas {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+
+#aulas .card {
+  display: block;
+  background-color: #fff;
+  width: 370px;
+  height: auto;
+  box-shadow: 0px 10px 10px 0px #BBCCDD66;
+  box-shadow: 0px 5px 5px 0px #BBCCDD66;
+  margin-top: 44px;
+  transition: .3s;
+  padding-bottom: 30px;
+}
+
+#aulas .card:hover {
+  transform: scale(1.04);
+  
+}
+
+#aulas .card h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #445566;
+  font-family: 'Nunito', sans-serif;
+  padding-top: 37px;
+  position: relative;
+}
+
+#aulas .card h3::before {
+  content: "";
+  background: url(../img/surfbot-icon.svg) center center no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 40px;
+}
+
+#aulas .card .card-content {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34.37px;
+  text-align: left;
+  color: #445566;
+}
+
+#aulas .card .card-content ul {
+  list-style: none;
+  text-decoration: none;
+  margin-top: 58px;
+  position: relative;
+}
+
+#aulas .card .card-content ul::after {
+  content: "";
+  display: block;
+  background-color: #EFF4F9;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 174px;
+}
+
+#aulas .card .card-content ul::before {
+  content: "";
+  display: block;
+  background-color: #EFF4F9;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 174px;
+}
+
+#aulas .card .card-content ul li::before {
+  content: "⃝";
+  display: inline-block;
+  color: #FF3726;
+  font-weight: bolder;
+  margin-right: 12px;
+}
+
+#aulas .card .card-content .preco {
+  margin-top: 50px;
+  color: #1188EE;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+
+#aulas .card .card-content .preco, a{
+  display: block;
+}
+
+#aulas .card .card-content a {
+  border: 0;
+  text-decoration: none;
+  padding: 9px 20px 6px 15px;
+  font-size: 1.8rem;
+  font-family: 'Nunito', sans-serif;
+  background-color: #445566;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  transition: .3s;
+}
+
+#aulas .card .card-content a:hover {
+  background-color: #17222D;
+}
+
+#aulas .aulas-footer p {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #445566;
+  font-family: 'Nunito', sans-serif;
+  padding-bottom: 57px;
+}
+
+.aulas-footer .vermelho{
+  color: #FF3726;
+}
+
+.aulas-footer span, a {
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+}
+
+
+@media (max-width: 400px) {
+  #aulas .card .card-content ul::after {
+    display: none;
+  }
+  
+  #aulas .card .card-content ul::before {
+    display: none;
+  }
+
+  .card-content ul {
+    margin-top: 28px !important;
+    text-align: center;
+  }
+
+  .card-content .preco {
+    margin-top: 20px !important;
+  }
+}
+/* Fim Aulas */
+
+/* Aside */
+aside {
+  background: url(../img/foto-quote.jpg) center center no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: 480px;
+  margin: 0 !important;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+aside h3 {
+  text-align: center;
+  font-family: 'Alice', serif;
+  font-size: 7.2rem;
+  max-width: 17ch;
+  color: #fff;
+  font-weight: 400;
+  padding-bottom: 50px;
+}
+
+aside p {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: 'Nunito', serif;
+  line-height: 24.55px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media (max-width: 650px) {
+  aside h3 {
+    font-size: 5rem;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  aside h3 {
+    font-size: 4rem;
+    padding-bottom: 20px;
   }
 }
