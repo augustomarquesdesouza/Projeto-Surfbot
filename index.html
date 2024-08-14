@@ -40,7 +40,7 @@
           <a href="#aulas">Aulas</a>
         </li>
         <li>
-          <a href="">Contato</a>
+          <a href="#contato">Contato</a>
         </li>
         <li>
           <a href="">Matricule-se</a>
@@ -109,7 +109,7 @@
           <img src="assets/img/mapa.jpg" alt="" id="mapa">
           <div class="como-chegar">
             <h3>
-              COMO CHEGAR
+              COMO CHEGAR?
             </h3>
             <p><span class="azul-marinho">Carro</span> pela via Lúcio Costa sentido Barra </p>
             <p><span class="azul-marinho">Ônibus</span> linhas 2333, 138, 189 e 17 </p>
@@ -119,7 +119,7 @@
       </div>
     </section>
     <div class="bg-aulas">
-      <h2 class="aulas-titutlo">Aulas</h2>
+      <h2>Aulas</h2>
       <section id="aulas" class="container">
         <div class="card">
           <h3>INFANTIL</h3>
@@ -174,7 +174,40 @@
       </aside>
     </div>
   </main>
-  <script src="./assets/js/script.js"></script>
+  <section id="contato" class="container">
+    <h2>Contato</h2>
+    <div class="contato-content">
+      <form>
+        <input type="text" name="nome" placeholder="Digite seu nome" required>
+        <input type="email" name="email" placeholder="Digite seu e-mail" required>
+        <textarea name="mensagem" placeholder="Digite sua mensagem"></textarea>
+        <button type="submit">ENVIAR MENSAGEM</button>
+      </form>
+      <div class="contato-dados">
+        <div class="endereco">
+          <h3>Endereço</h3>
+          <span>Praia Mansa nº 47, Rio de Janeiro - RJ</span>
+        </div>
+        <div class="email">
+          <h3>E-mail</h3>
+          <span>contato@surfbot.com - 21 99999-9999</span>
+        </div>
+        <div class="funcionamento">
+          <h3>Horário</h3>
+          <span>De Sexta à Sábado Das 06:00 às 14:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="copy-bg">
+      <div class="container" id="footer">
+        <p>Surfbot 2024 - Todos os reservados.</p>
+        <img src="./assets/img/surfbot-logo.svg" alt="Surfbot">
+      </div>
+    </div>
+  </footer>
+  <script defer src="./assets/js/script.js"></script>
 </body>
 
 </html>
