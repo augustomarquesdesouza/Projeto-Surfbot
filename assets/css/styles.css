@@ -991,6 +991,10 @@ footer p {
 
 @media (max-width: 500px) {
 
+  #footer {
+    flex-direction: column;
+  }
+
   #contato h2 {
     font-size: 5rem;
   }
