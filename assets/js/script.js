@@ -40,7 +40,7 @@ initScroll();
 //Animação ao scroll
 function initAnimaScroll() {
     const sections = document.querySelectorAll('.js-scroll');
-    const windowsMetade = window.innerHeight * 0.8;
+    const windowsMetade = window.innerHeight * 0.75;
     
     function animaScroll() {
         sections.forEach((section) => {

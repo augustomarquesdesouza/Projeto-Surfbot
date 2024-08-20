@@ -1023,7 +1023,7 @@ footer p {
 
 .js-scroll.ativo {
   opacity: 1;
-  transition: .3s;
+  transition: .5s;
   transform: translate3d(0, 0, 0);
 }
 
