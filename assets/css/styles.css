@@ -956,6 +956,12 @@ footer .copy-bg {
   background-color: #1188EE;
 }
 
+@media (max-width: 500px ){
+  footer img {
+    padding-bottom: 30px;
+  }
+}
+
 footer p {
   font-family: Nunito;
   font-size: 18px;
