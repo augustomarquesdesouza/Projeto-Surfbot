@@ -7,7 +7,7 @@ Bem-vindo ao **SurfBot**, o site oficial da nossa escola de surf! SurfBot é a p
 1. [Descrição do Projeto](#descrição-do-projeto)
 2. [Tecnologias Usadas](#tecnologias-usadas)
 3. [Deploy](#deploy)
-4. [Créditos](#creditos)
+4. [Créditos](#créditos)
 
 ## Descrição do Projeto
 
